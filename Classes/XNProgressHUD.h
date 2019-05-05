@@ -137,8 +137,11 @@ XNHUDMaskColorMake(unsigned int  clear, unsigned int black, unsigned int custom)
 @property (nonatomic, assign) CGFloat refreshViewWidth; //转圈视图的尺寸
 @property (nonatomic, assign) XNRefreshViewStyle refreshStyle; //样式
 @property (nonatomic, assign) CGColorRef shadowColor; //阴影颜色
+@property (nonatomic, assign) CGSize shadowOffset;
+@property (nonatomic, assign) HUDPadding padding;
 @property (nonatomic, assign) CGFloat progress;
-@property (nonatomic, assign) BOOL showing; 
+@property (nonatomic, assign) BOOL showing;
+@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) NSString *title; //文字
 @property (nonatomic, strong) UIColor *tintColor; //主色色调
 @property (nonatomic, weak)   UIViewController *viewController; //是否显示在ViewController上，为空时显示在Window上

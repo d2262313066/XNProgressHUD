@@ -14,11 +14,9 @@
 @property (nonatomic, strong) UIView *maskView;
 @property (nonatomic, strong) UIView *shadeContentView;
 @property (nonatomic, strong) UIView *contentView;
-@property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) NSTimer *displayTimer;
 @property (nonatomic, strong) NSTimer *dismissTimer;
 @property (nonatomic, assign) CGRect frame;
-@property (nonatomic, assign) HUDPadding padding;
 @property (nonatomic, assign) NSTimeInterval disposableDelayResponse; //延时相应
 @property (nonatomic, assign) NSTimeInterval disposableDelayDismiss; //延时消失时间
 @end
@@ -155,7 +153,7 @@
         _shadeContentView = [UIView new];
         _shadeContentView.backgroundColor = [UIColor clearColor];
         _shadeContentView.layer.shadowColor = _shadowColor;
-        _shadeContentView.layer.shadowOffset = CGSizeMake(3,3);
+        _shadeContentView.layer.shadowOffset = _shadowOffset;
         _shadeContentView.layer.shadowOpacity = 0.6;
         _shadeContentView.layer.shadowRadius = 5.f;
         _shadeContentView.userInteractionEnabled = NO;
@@ -290,6 +288,7 @@
     _refreshViewWidth = XNRefreshViewWidth;
     _tintColor = [UIColor colorWithRed:0/255.f green:0/255.f blue:0/255.f alpha:0.9f];
     _shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1.f].CGColor;
+    _shadowOffset = CGSizeMake(3,3);
     _position = [UIApplication sharedApplication].delegate.window.center;
     //shadeView、contentView
     [self.shadeContentView addSubview:self.contentView];
