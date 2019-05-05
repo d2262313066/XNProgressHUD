@@ -328,13 +328,14 @@
                 titleLabelFrame = CGRectMake(padding.left*2 + refreshWidth, (_frame.size.height-titleLabelSize.height)/2, titleLabelSize.width, titleLabelSize.height);
             }else{
                 refreshWidth *= 1.5;
-                height = padding.top*2 + refreshWidth + padding.bottom + titleLabelSize.height;
+                CGFloat titleMarginTop = padding.top*0.7;
+                height = padding.top + titleMarginTop + refreshWidth + padding.bottom + titleLabelSize.height;
                 CGFloat widthWithHudView = padding.left + refreshWidth + padding.right;
                 CGFloat widthWithTitleView  = padding.left + titleLabelSize.width + padding.right;
                 _frame.size = CGSizeMake(MAX(widthWithHudView, widthWithTitleView), height);
                 _frame.origin = CGPointMake(_position.x-_frame.size.width/2, _position.y-_frame.size.height/2);
                 refreshViewFrame = CGRectMake((_frame.size.width-refreshWidth)/2, padding.top, refreshWidth, refreshWidth);
-                titleLabelFrame = CGRectMake(padding.left, padding.top*1.6+refreshWidth, titleLabelSize.width, titleLabelSize.height);
+                titleLabelFrame = CGRectMake(padding.left, padding.top+titleMarginTop+refreshWidth, titleLabelSize.width, titleLabelSize.height);
             }
         }
             break;
