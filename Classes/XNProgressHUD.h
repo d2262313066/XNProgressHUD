@@ -125,6 +125,9 @@ XNHUDMaskColorMake(unsigned int  clear, unsigned int black, unsigned int custom)
 @interface XNProgressHUD : NSObject <XNProgressHUDProtocol, XNProgressHUDMethod>
 
 @property (nonatomic, strong, readwrite) UIView *refreshView;
+@property (nonatomic, strong) UIView *maskView;
+@property (nonatomic, strong) UIView *shadeContentView;
+@property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, assign) XNProgressHUDOrientation orientation;
 @property (nonatomic, assign, readonly) XNProgressHUDStyle style;
 @property (nonatomic, assign) CGFloat borderWidth; //圆角

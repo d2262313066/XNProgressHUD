@@ -11,9 +11,6 @@
 @interface XNProgressHUD() {
     UIView *_refreshView;
 }
-@property (nonatomic, strong) UIView *maskView;
-@property (nonatomic, strong) UIView *shadeContentView;
-@property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) NSTimer *displayTimer;
 @property (nonatomic, strong) NSTimer *dismissTimer;
 @property (nonatomic, assign) CGRect frame;
